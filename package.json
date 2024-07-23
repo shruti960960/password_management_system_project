@@ -1,0 +1,26 @@
+{
+  "name": "passwordmanagementsystem",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ckeditor": "^4.12.1",
+    "ckeditor4": "^4.24.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-validator": "^7.1.0",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.4",
+    "mongoose-paginate": "^5.0.3",
+    "mongoose-paginate-v2": "^1.8.2",
+    "morgan": "~1.9.1",
+    "node-localstorage": "^3.0.5",
+    "nodemon": "^3.1.4"
+  }
+}

@@ -1,0 +1,40 @@
+<%- include('header')%>
+      <div class="container  my-5">
+        <!-- <h2 class="text-center"><%=title%></h2> -->
+        <div class="row justify-content-center">
+          <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6">
+            <div class="card">
+             
+        <div class="card-header bg-info text-white">
+          <div class="card-title"><h5>Edit Category Name</h5></div>
+        </div>
+        <div class="card-body">
+          <%if(errors!=''){%>
+            <p style="text-align: center;color: red;">  <%=errors.passwordCategory.msg%></p>
+              <%}%>
+          <%if(msg!=''){%>
+            <p style="text-align: center;color: green;">   <%=msg%></p>
+            <%}%>
+          <form action="/passwordCategory/edit" method="post">
+           
+            <div class="mb-3 row">
+              <input type="hidden" name="id" value="<%=records._id%>">
+              <label class="col-md-3 col-form-label">Password Category Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="passwordCategory" placeholder="Enter Your Password Category" value="<%=records.password_category%>">
+              </div>
+            </div>
+           
+          
+            <div class="mb-3 row">
+              <div class="offset-md-3 col-md-9">
+                <input type="submit" name="submit" value="Edit Category" class="btn btn-info text-white">
+              </div>
+            </div>
+  
+            <p class="offset-md-3 col-md-9"><a href="/passwordCategory">View All Category Lists</a></p>
+          </form>
+        </div>
+        </div></div></div></div>
+  </body>
+</html>

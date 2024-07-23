@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+.nav-item .nav-link {
+  color: #555;
+  font-weight: 500;
+}
+.nav-item .nav-link:hover {
+  color: #007bff;
+}
+.dropdown-menu {
+  background-color: #f8f9fa;
+}
+.dropdown-item:hover {
+  background-color: #e9ecef;
+}
+.table th, .table td {
+  vertical-align: middle;
+}
+

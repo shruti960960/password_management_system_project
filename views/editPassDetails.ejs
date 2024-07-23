@@ -1,0 +1,58 @@
+<%- include('header')%>
+
+      <div class="container  my-5">
+        <!-- <h2 class="text-center"><%=title%></h2> -->
+        <div class="row justify-content-center">
+          <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6">
+            <div class="card">
+             
+        <div class="card-header bg-info text-white">
+          <div class="card-title"><h5>Edit Password Details</h5></div>
+        </div>
+        <div class="card-body">
+          <%if(errors!=''){%>
+            <p style="text-align: center;color: red;">  <%=errors.passwordCategory.msg%></p>
+              <%}%>
+          <%if(msg!=''){%>
+            <p style="text-align: center;color: green;">   <%=msg%></p>
+            <%}%>
+          <form action="/editpasswordDetails/edit" method="post">
+           
+            <div class="mb-3 row">
+              <input type="hidden" name="id" value="<%=records._id%>">
+              <label class="col-md-3 col-form-label">Password Category Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="passwordCategory" placeholder="Enter Your Password Category" value="<%=records.pass_category%>">
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+              <input type="hidden" name="id" value="<%=records._id%>">
+              <input type="hidden" name="page" value="<%=page%>">
+              <label class="col-md-3 col-form-label">Project Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="projectName" placeholder="Enter Your Password Category" value="<%=records.project_name%>">
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+                <input type="hidden" name="id" value="<%=records._id%>">
+                <label class="col-md-3 col-form-label">Password Detail</label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control" name="passDetails" placeholder="Enter Your Password Category" value="<%-records.password_detail%>">
+                </div>
+              </div>
+  
+          
+            <div class="mb-3 row">
+              <div class="offset-md-3 col-md-9">
+                <input type="submit" name="submit" value="Edit Details" class="btn btn-info text-white">
+              </div>
+            </div>
+  
+            <p class="offset-md-3 col-md-9"><a href="/viewAllPassword">View All Category Password Lists</a></p>
+          </form>
+        </div>
+        </div></div></div></div>
+  </body>
+</html>
